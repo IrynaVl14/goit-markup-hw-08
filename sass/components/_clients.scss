@@ -1,0 +1,20 @@
+.clients__list {
+  @include flex($jc: space-between);
+}
+
+.clients__logo {
+  @include flex($jc: space-between, $ai: center);
+
+  fill: $company-logo-color;
+  padding: 16px 32px;
+
+  @include border($company-logo-color);
+
+  @include transition(border-color, fill);
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+}

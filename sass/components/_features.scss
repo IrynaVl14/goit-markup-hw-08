@@ -1,0 +1,26 @@
+.feature-list {
+  @include flex($jc: space-between);
+}
+
+.feature-list__item {
+  width: 270px;
+}
+
+.feature-list__icon {
+  @include flex($ai: center);
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  border-radius: 4px;
+  background-color: $secondary-bg-color;
+}
+
+.feature-list__title {
+  margin-bottom: 10px;
+  color: $title-text-color;
+
+  @extend %title--text;
+}
+
+.feature-list__text {
+  line-height: 1.71;
+}

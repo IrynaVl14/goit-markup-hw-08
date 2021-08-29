@@ -1,0 +1,29 @@
+.work {
+  padding-top: 0;
+}
+
+.work-list {
+  @include flex($jc:space-between);
+}
+
+.work-list__item {
+  position: relative;
+}
+.work-list__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+  color: $white-text-color;
+}
+
+.work-list__paragraph {
+  @include flex($jc: center, $ai: center);
+
+  min-height: 70px;
+
+  @extend %title--text;
+}

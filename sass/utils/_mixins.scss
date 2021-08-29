@@ -1,0 +1,39 @@
+@mixin flex($jc: false, $ai: false) {
+  display: flex;
+  @if ($jc) {
+    justify-content: $jc;
+  }
+  @if ($ai) {
+    align-items: $ai;
+  }
+}
+
+@mixin border($border-color) {
+  border: 1px solid $border-color;
+  border-radius: 4px;
+}
+
+@mixin transition($property...) {
+  transition: 250ms $primary-timing-function 0ms;
+  @if length($property) >0 {
+    transition-property: $property;
+  }
+}
+
+//Info:
+// @mixin transition-base($properties...){
+//   // Свойство transition-property по-умолчанию равно значению all
+//   // т.е. запись transition: 250ms ease 0s; будет
+//   // эквивалентна записи transition: all 250ms ease 0s;
+//   transition: 250ms ease 0s;
+//   @if length($properties) > 0 {
+//     transition-property: $properties;
+//   }
+// }
+
+// .s1 {
+//   @include transition-base();
+// }
+// .s2 {
+//   @include transition-base(padding, color, border-color);
+// }
