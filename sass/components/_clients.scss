@@ -1,20 +1,56 @@
 .clients__list {
-  @include flex($jc: space-between);
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    @include flex();
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 480px) {
+    margin-right: -20px;
+    margin-bottom: -30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex($jc: space-between);
+  }
 }
 
-.clients__logo {
-  @include flex($jc: space-between, $ai: center);
-
-  fill: $company-logo-color;
-  padding: 16px 32px;
+.clients__item {
+  margin-bottom: 30px;
+  @include flex($jc: center, $ai: center);
 
   @include border($company-logo-color);
-
-  @include transition(border-color, fill);
+  @include transition(border-color);
 
   &:hover,
   &:focus {
     border-color: $accent-color;
+  }
+
+  @media screen and (min-width: 480px) {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    flex-basis: calc(100% / 2 - 20px);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+.clients__logo {
+  padding: 16px;
+  fill: $company-logo-color;
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
     fill: $accent-color;
   }
 }

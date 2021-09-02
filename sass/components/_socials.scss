@@ -1,6 +1,6 @@
 .social__list {
-  @include flex($jc: space-between, $ai: center);
   width: 206px;
+  @include flex($jc: space-between, $ai: center);
 }
 
 .social__icon {

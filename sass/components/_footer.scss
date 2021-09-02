@@ -5,7 +5,21 @@
 }
 
 .footer__container {
-  @include flex($ai:center);
+  @include flex($ai: center);
+  flex-direction: column;
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    @include flex($ai: flex-start);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex($ai: center);
+    // flex-direction: row;
+  }
 }
 
 .footer__logo {
@@ -15,15 +29,43 @@
 .footer__title {
   @extend %title--text;
   color: $white-text-color;
+
   margin-bottom: 20px;
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
+}
+
+.footer__item {
+  @media screen and (max-width: 1199px) {
+    @include flex($ai: center);
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+.address__item {
+  @media screen and (max-width: 1199px) {
+    @include flex($jc: center);
+  }
 }
 
 .address__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
+.address {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 50px;
+  }
+}
 .address__link {
-  margin-right: 70px;
   font-style: normal;
   line-height: 1.71;
   color: $contacts-footer-color;
@@ -38,18 +80,31 @@
   &--color-white {
     color: $white-text-color;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 
 .subscribe {
-  margin-left: auto;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 }
 
 .subscribe__form {
-  @include flex();
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex();
+  }
 }
 
 .subscribe__input {
-  margin-right: 12px;
   width: 358px;
   padding: 16px 15px;
   background-color: transparent;
@@ -66,6 +121,18 @@
     color: rgba(255, 255, 255, 0.6);
     font-size: 16px;
     font-family: inherit;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
   }
 }
 

@@ -1,6 +1,14 @@
 .contacts__list {
-  @include flex($ai: center);
-  margin-left: auto;
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex($ai: center);
+    margin-left: auto;
+  }
 }
 
 .contacts__link {
