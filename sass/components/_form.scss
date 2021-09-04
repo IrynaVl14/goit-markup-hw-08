@@ -88,7 +88,7 @@
 }
 
 .form-field__checkbox-form {
-  @include flex($jc:center);
+  @include flex($jc: center);
 
   margin-top: 20px;
   margin-bottom: 30px;
@@ -104,9 +104,16 @@
 }
 
 .form-field__checkbox-label {
-  @include flex($ai:center);
+  @include flex($ai: center);
 
   cursor: pointer;
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 
   &::before {
     content: "";
