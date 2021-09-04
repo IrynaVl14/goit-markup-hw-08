@@ -346,6 +346,14 @@ a {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.mobile-menu__social-item:hover, .mobile-menu__social-item:focus {
+  color: #188ce8;
 }
 
 .mobile-menu__vertical-divider {

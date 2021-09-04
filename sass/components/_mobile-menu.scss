@@ -112,6 +112,13 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: $accent-color;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $focus-hover-color;
+  }
 }
 .mobile-menu__vertical-divider {
   margin: 0 10px;
