@@ -4,12 +4,10 @@
     flex-wrap: wrap;
   }
 
-  margin-right: -20px;
-  margin-bottom: -30px;
+  margin: -10px;
 
   @media screen and (min-width: 768px) {
-    margin-right: -30px;
-    margin-bottom: -30px;
+    margin: -15px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -18,10 +16,6 @@
 }
 
 .clients__item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
-
   @include flex($jc: center, $ai: center);
 
   @include border($company-logo-color);
@@ -32,14 +26,14 @@
     border-color: $accent-color;
   }
 
-  margin-right: 20px;
-  margin-bottom: 30px;
-  flex-basis: calc(100% / 2 - 20px);
+  margin: 10px;
+
+  flex-basis: calc((100% - 10px * 4) / 2);
 
   @media screen and (min-width: 768px) {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    flex-basis: calc(100% / 3 - 30px);
+    margin: 15px;
+
+    flex-basis: calc((100% - 15px * 6) / 3);
   }
 }
 

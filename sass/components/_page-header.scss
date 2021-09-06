@@ -7,10 +7,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    @include flex($ai: center);
-  }
-
-  @media screen and (min-width: 1200px) {
+    @include flex($jc: space-between, $ai: center);
   }
 }
 
@@ -19,7 +16,10 @@
 }
 
 .page-header__logo {
-  margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
